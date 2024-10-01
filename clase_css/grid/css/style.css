@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+article{
+    background-color: tomato;
+    /*width: 300px;*/
+    width: 100%;
+    height: 300px;
+    border: 1px solid white;
+}
+
+/*display: grid --> mas potente*/
+
+.section1{
+    display: grid;
+    /*33% 33% 33%*/
+    grid-template-columns: repeat(3,33%);
+
+    /*grid-template-rows: repeat(2,50vh);*/
+    /*grid-template-rows: repeat(2,50%);*/
+    grid-template-rows: minmax(100px, auto) minmax(200px, auto)
+}
+
+.articulo1{
+    grid-column: 1/3;
+}
+
+.articulo2{
+    grid-row: 1/3;
+    grid-column: 3/4;
+}
