@@ -1,0 +1,47 @@
+@keyframes cambioTamanio{
+    
+    0%{
+        font-size: 10px;
+        color: red;
+        transform: rotate(0deg) scale(1);
+    }
+
+    33%{
+        font-size: 15px;
+        color: orange;
+        transform: rotate(180deg) scale(1.3);
+    }
+
+    66%{
+        font-size: 20px;
+        color: yellow;
+        transform: rotate(240deg) scale(1.6);
+    }
+
+    100%{
+       font-size: 25px;
+       color: white;
+       transform: rotate(360deg) scale(2);
+    }
+
+}
+
+.footer{
+    background-color: lightgreen;
+    /*anidacion con &(es el padre) --> algun hijo*/
+
+    & h2{
+        display: inline-block;
+        color: red;
+        /*da sentido a la animacion la continua*/
+        animation: cambioTamanio 3s ease-in-out alternate infinite;
+    }
+
+    .text{
+        color: yellow;
+    }
+
+}
+
+
+
