@@ -1,0 +1,38 @@
+.header{
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 60px;
+}
+
+main{
+    width: 80%;
+    background-color: lightslategray;
+}
+
+.menu{
+    padding: 0;
+    margin: 20px 0px;
+}
+
+.menu li{
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu a{
+    display:inline-block;/*Pone a los elementos en linea y permite cambiar su tamaño*/
+    text-decoration: none;
+    color: black;
+    background-color: lightgreen;
+    border-radius: 5px;
+    width: 100;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.shadow{
+    width: 150px;
+}

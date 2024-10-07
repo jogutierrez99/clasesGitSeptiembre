@@ -1,0 +1,61 @@
+/* html{
+    font-family: "Roboto";
+}*/
+
+/*Caracteristicas que deben aplicarse a todo el documento, definicion de variables*/
+:root{
+    font-family: "Roboto";
+}
+
+/*
+@font-face {
+    font-family: "tipo de letra";
+    src: url("url de la fuente");
+}*/
+
+body{
+    background-color: cadetblue;
+}
+
+main{
+    height: 100vh;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.icon{
+    color:green;
+    font-size: 30px;
+}
+
+/* hover--> accion a realizar al pasar el raton en un elemento*/
+
+.icon:hover{
+    color: red;
+    font-size: 32px;
+}
+
+.link:visited{
+    color: purple;
+}
+
+.redes li{
+    display: inline-block;
+    margin: 5px;
+}
+
+.content{
+    background-color: aqua;
+    display: inline-block;
+    width: 69%;
+}
+
+.aside{
+    background-color: red;
+    display: inline-block;
+    width: 30%;
+}

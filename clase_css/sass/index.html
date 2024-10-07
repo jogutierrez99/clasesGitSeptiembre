@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+    <header>
+        <h1>Pagina de formularios</h1>
+        <nav class="menu">
+            <h2 class="hamburguesa">Hamburguesa
+                <p class="desplegable">Desplegable</p>
+            </h2>
+            <h3>contacto</h3>
+            <p class="desplegable">Desplegable</p>
+        </nav>
+    </header>
+    <!--Archivo que trata la informacion y la envia al servidor-->
+
+    <main class="main">
+        <h2>Contactanos</h2>
+        <form action=".">
+
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" placeholder="Joshua" name="name"/>
+            </div>
+    
+            <div>
+                <label for="lastname">Apellido:</label>
+                <input type="text" id="lastname" placeholder="Gutierrez" name="lastname"/>
+            </div>
+    
+            <div>
+                <label for="country">Pais:</label>
+                <select name="country" id="country">
+                    <option value="">selecciona</option>
+                    <option value="es">España</option>
+                    <option value="pt">Portugal</option>
+                    <option value="fr">Francia</option>
+                </select>
+            </div>
+    
+            <!--Seleccion simple-->
+            <div>
+                <label for="pet">Tienes mascotas</label>
+                <label for="">si</label>
+                <input type="radio" name="pet" id="">
+                <label for="">no</label>
+                <input type="radio" name="pet" id="pet">
+            </div>
+    
+            <div>
+                <label for="">Que quiero obtener del bootcamp?</label>
+                <div>
+                    <label for="dinero">Dinero</label>
+                    <input type="checkbox" name="dinero" id="dinero" value="1">
+                </div>
+    
+                <div>
+                    <label for="teletrabajo">Teletrabajo</label>
+                    <input type="checkbox" name="teletrabajo" id="teletrabajo" value="2">
+                </div>
+    
+                <div>
+                    <label for="conocimiento">conocimiento</label>
+                    <input type="checkbox" name="conocimiento" id="conocimiento" value="3">
+                </div>
+    
+            </div>
+    
+            <div>
+                <input type="password" name="contraseña" id="contraseña" placeholder="contraseña" />
+            </div>
+    
+            <div>
+                <input type="email" name="" id="" placeholder="ejemplo@gmail.com" />
+            </div>
+    
+            <div>
+                <input type="date" name="" id="">
+                <input type="time" name="" id="">
+                <input type="month" name="" id="">
+            </div>
+    
+            <div>
+                <input type="color" name="" id="">
+            </div>
+    
+            <div>
+                <input type="file" name="" id="">
+            </div>
+    
+            <input type="submit" value="Registrar" class="btn"/>
+            <input type="reset" value="Borrar">
+    
+            <!--Se puede personalizar-->
+            <!--Type= Submit, reset, button(no tiene comportamiento predeterminado se modifica con JS)-->
+            <button class="btn" type="button">
+                Login
+            </button>
+    
+        </form>
+
+    </main>
+
+ 
+
+    <footer class="footer">
+        <h2>
+            copy@
+        </h2>
+        <i class="fa-brands fa-instagram"></i>
+        <small class="text">hecho por joshua</small>
+    </footer>
+
+  </body>
+</html>

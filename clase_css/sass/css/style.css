@@ -1,0 +1,14 @@
+/*Primero fuentes externas*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+/*Segundo reset*/
+@import url("./partials/reset.css");
+@import url("./partials/header.css");
+@import url("./partials/main.css");
+@import url("./partials/footer.css");
+
+/*mejor al final el mediaqueries*/
+@import url("./partials/mediaqueries.css");
+/*
+con sass
+anidaciones, mixins, funciones
+*/
