@@ -1,115 +1,48 @@
-/* let edad = "33";
-let edadNumber = parseInt(edad);
-/*console.log(typeof edad);
-console.log(typeof edadNumber);
-console.log(edadNumber);
+// Bucles for y foreach
 
-let nombreConPatatas = "";
-
-
-
-let tartas = 20;
-let numeroPersonas = 4;
-
-console.log(tartas / numeroPersonas);
-
-console.log(tartas % numeroPersonas);
-
-
-let i = 0;
-
-console.log(i);
-
-i++;
-
-i += 1;
-
-console.log(i);
-
-
-console.log(i++);
-
-console.log(i);
-
-i--;
-
-console.log(i);*/
-
-/*
-let nombre = "joshua";
-let apellido = "Guti";
-
-console.log("Hola " + nombre + " " + apellido);
-
-let suma1 = 10 + 5;
-
-console.log(suma1);
-
-let suma2 = 10 + "5";
-console.log(suma2);
-*/
-/*
-const EDAD_ADULTO = 18;
-
-console.log(EDAD_ADULTO);
-*/
-
-/*
-let edad = 18;
-
-// si mayor de edad, preguntar que quiere beber
-// si menor de edad, echar deñ bar
-
-if(edad >= 18){
-    console.log("Que quieres beber")
-}else{
-    console.log("Solo para adultos")
+for (let i = 0; i < 10; i++) {
+    //console.log(i);
 }
 
-// operadores de comparacion > < >= <= == === != !===
-
-let username = "paco";
-if(username == "paco"){
-    console.log("nombre bonito")
-}else{
-    console.log("Nombre aburrido")
-}
-// == compara el valor -- === compara el valor y el tipo de variable
-if(18 === "18"){
-    console.log("iguales");
-}else{
-    console.log("no son iguales");
-}
-
-let isEqual = "18" === "18";
-
-if(isEqual){
-    console.log("real");
-}*/
+//let i = 0;
 
 /*
-let username = "paco";
-
-// let dentro del scopre ---> var dentro del hambito global
-if(true){
-
-    console.log(username);
-    var lastname = "guti";
-    console.log(lastname);
-
+while (i<10) { 
+    console.log(i);
+    i++
 }
 
-console.log(lastname);
-*/
+let number;
+
+while (isNaN(number)) {
+
+    number =prompt("Dime un numero");
+    console.log("Has escrito " + number);
+    number = parseInt(number);
+}
+
+console.log("El numero es: " + number);*/
+
+let names = ["Joshua", "Pedro", "Ana", "Julia"];
 
 
-//Operadores logicos && u ||
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
 
-/*
-let age = 18;
+for(let name of names){
+    console.log(name);
+}
 
-let isPretty = false;
+names.forEach(nombres => {
+    console.log(nombres);
+});
 
-if(age >= 18 && isPretty){
-    console.log("Que cubata quieres");
-}*/
+let person ={
+    name: "Joshua",
+    age: 25
+};
+
+for(let key in person){
+    console.log(key + ": " + person[key]);
+};
