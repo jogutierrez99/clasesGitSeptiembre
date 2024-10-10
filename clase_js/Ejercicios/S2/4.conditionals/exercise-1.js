@@ -3,10 +3,27 @@ const alumns = [
 ]
 
 for(let alumn of alumns){
-    //console.log(alumn);
-    if((alumn.T1 == true || alumn.T2 == true) && alumn.T3 == true){
-        alumn.isApproved = true;
+    //console.log(alumn.name);
+   if(alumn.T1 == true){
+
+        if(alumn.T2 == true){
+            alumn.isApproved = true;
+        }else if(alumn.T3 == true){
+            alumn.isApproved = true;
+        }else{
+            alumn.isApproved = false;
+        }
+
+    }else if(alumn.T2 == true){
+
+        if(alumn.T3 == true){
+            alumn.isApproved = true;
+        }else{
+            alumn.isApproved = false;
+        }
+
+    }else{
+        alumn.isApproved = false;
     }
-    console.log(alumn);
-    //alumn.isApproved = true;
-}
+    console.log(alumn.name + " " + alumn.isApproved);
+};
