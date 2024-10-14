@@ -5,6 +5,9 @@ function sum(numberOne , numberTwo) {
     }else{
         return numberTwo;
     }
+
+    //return numberOne > numberTwo ? numberOne : numberTwo;
+
   }
 
 console.log(sum(3,7));

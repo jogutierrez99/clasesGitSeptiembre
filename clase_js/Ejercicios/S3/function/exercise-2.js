@@ -2,7 +2,7 @@ const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain
 function findLongestWord(param) {
   // insert code
   let bigAvenger = "";
-    for (const avenger of avengers) {
+    for (const avenger of param) {
 
         if(avenger.length>bigAvenger.length){
             bigAvenger = avenger;

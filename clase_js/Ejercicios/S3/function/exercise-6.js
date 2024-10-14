@@ -11,6 +11,7 @@ const duplicates = [
     'pasta',
     'soda'
   ];
+  
   function removeDuplicates(param) {
     // insert code
     let arrayNuevo = [];
@@ -25,8 +26,9 @@ const duplicates = [
             
     }
 
-    console.log(arrayNuevo);
+   return arrayNuevo;
 
   }
 
-  removeDuplicates(duplicates);
+
+console.log(removeDuplicates(duplicates));

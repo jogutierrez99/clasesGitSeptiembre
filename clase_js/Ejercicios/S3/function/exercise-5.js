@@ -6,20 +6,20 @@ function averageWord(param) {
         
         if(typeof element == "number"){
 
-           console.log(element);
+           //console.log(element);
            suma += element;
 
         }else{
 
-          console.log(element);
+          //console.log(element);
           suma += element.length;
 
         };
     }
 
-    console.log(suma);
+    return suma;
 }
 
 
-averageWord(mixedElements);
+console.log(averageWord(mixedElements));
 

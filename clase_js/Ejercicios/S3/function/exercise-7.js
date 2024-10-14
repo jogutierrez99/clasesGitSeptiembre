@@ -11,9 +11,12 @@ const nameFinder = [
     'Jessica',
     'Marc'
   ];
+
+  
   function finderName(param, name) {
     // insert code
     //console.log(number);
+    // return param.indexOf(name);
     if(param.includes(name)){
        console.log("Existe");
 
@@ -25,12 +28,14 @@ const nameFinder = [
         
        }
 
-    }else{
+      }else{
 
         console.log("No existe");
 
-    }
+      }
 
   }
+
+
 
 finderName(nameFinder, "Tony");

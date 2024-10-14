@@ -10,7 +10,7 @@ function average(param) {
         media++;
     }
 
-    return suma / media;
+    return suma / param.length;
 
 }
 
