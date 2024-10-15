@@ -32,12 +32,12 @@ const users = [
 
 function volumeMedia(users){
 
-    sonidosFav = [{sonido:"" , contador: 0}];
+    let counter = {};
 
     for (const user of users) {
     
-        for (const key in user.favoritesSounds) {
-            
+        for (const soundkey in user.favoritesSounds) {
+            /*
             if(key == "waves"){
                 //let volumen = user.favoritesSounds.waves.volume;
                 //suma += user.favoritesSounds.waves.volume;
@@ -46,7 +46,7 @@ function volumeMedia(users){
                     sonidosFav.push({sonido:"waves" , contador: 0});
                 }else{
                     sonidosFav.contador = sonidosFav.contador++;
-                }*/
+                }
 
 
             }
@@ -74,13 +74,19 @@ function volumeMedia(users){
             if(key == "wind"){
                 //let volumen = user.favoritesSounds.waves.volume;
                
-            }
+            } */
     
+            if(!counter.hasOwnProperty(soundkey)){
+                counter[soundkey] = 0;
+            }
+
+            counter[soundkey]++;
+
         }
         
     }
     
-    return sonidosFav;
+    return counter;
     
     }    
 

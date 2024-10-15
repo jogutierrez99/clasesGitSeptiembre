@@ -7,12 +7,28 @@ const movies = [
 
 const categories = [];
 
-function categorias(param) {
+function categorias(movies) {
 
-    for (const movie of param) {
+   /* for (const movie of param) {
        categories.push(movie.categories)
     }
     return categories;
+    */
+
+    let allCategories = [];
+
+    for (const movie of movies) {
+
+        for (const category of movie.categories) {
+          
+            if(!allCategories.includes(category)){
+                allCategories.push(category);
+            }
+        }
+        
+    }
+
+    return allCategories;
 }
 
 console.log(categorias(movies));

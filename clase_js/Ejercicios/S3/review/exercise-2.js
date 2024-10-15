@@ -31,12 +31,12 @@ const users = [
 
 function volumeMedia(users){
 
-let suma = 0;
-let media = 0;
+let totalVolume = 0;
+let soundCounter = 0;
 for (const user of users) {
 
-    for (const key in user.favoritesSounds) {
-        
+    for (const soundkey in user.favoritesSounds) {
+        /*
         if(key == "waves"){
             //let volumen = user.favoritesSounds.waves.volume;
             suma += user.favoritesSounds.waves.volume;
@@ -67,12 +67,16 @@ for (const user of users) {
             suma += user.favoritesSounds.wind.volume;
         }
 
-        media++;
+        media++; */
+        let sound = user.favoritesSounds[soundkey]
+        totalVolume += sound.volume;
+        soundCounter++;
+
     }
     
 }
 
-return media = suma / media;
+return totalVolume / soundCounter;
 
 }
 
