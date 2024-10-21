@@ -1,8 +1,9 @@
 let $btn = document.querySelector("#btnToClick");
 
 
-function sayHello(){
+function sayHello(e){
+    console.log(e);
     console.log(this);
 }
 
-$btn.addEventListener("click" , sayHello());
+$btn.addEventListener("click" , sayHello);
