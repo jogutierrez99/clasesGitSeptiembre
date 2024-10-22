@@ -1,74 +1,100 @@
-var pilots = [ 
-    { id: 2, name: "Wedge Antilles", faction: "Rebels"}, 
-    { id: 22, name: "Dark Vader", faction: "Empire" },
-    { id: 19, name: "Thanos", faction: "Empire" },
-    { id: 66, name: "Thane Kyrell", faction: "Rebels"}];
+/*function sayHi(){
+    console.log("Holaaaa");
+}
+
+setTimeout(sayHi, 3000);
 
 
-   /* let idsArray = pilots.map(function (pilot){
-        return idsArray.id;
-    });
+setTimeout(function(){
+    console.log("klk");
+} , 3000);
 
-    console.log(idsArray);*/
+let time= 0;
+function countTime(){
+    time++;
+    console.log(time);
 
+    if(time == 10){
+        clearInterval(timer);
+    }
+}
 
-    //ARRAY filter
+let timer = setInterval(countTime, 100);
 
+clearInterval();
 
-    /*let rebelPilots = [];
+let $div = document.querySelector("#timeDiv");
+function update(){
+    let date = new Date();
+    let dateString = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    $div.textContent = dateString;
+}
 
-    for (const pilot of pilots) {
-        if(pilot.faction === "Rebels"){
-            rebelPilots.push(pilot);
-        }
-    }*/
-/*
-    let rebelPilots = pilots.filter(function(pilot){
-        return pilot.faction === "Rebels";
-    });
-
-    console.log(rebelPilots);*/
-
-let rebelPilots = pilots.filter(pilot => pilot.faction === "Rebels");
-
-const array1 = [1,2,3,4,5,12];
-
-let numberFund = array1.find(function(n){
-    return n > 10;
-})
-
-let numberFund2 = array1.find(n => n>10);
-
-console.log(numberFund);
-//Reduce
-var pilots2 = [ 
-	{ id: 10, name: "Poe Dameron", years: 14, }, 
-	{ id: 2, name: "Temmin 'Snap' Wexley", years: 30, }, 
-	{ id: 41, name: "Tallissan Lintra", years: 16, }, 
-	{ id: 99, name: "Ello Asty", years: 22, }
-];
+update();*/
 
 /*
-let totalYears = pilots2.reduce(function(acc, pilot){
-    return acc + pilot.years;
-}, 0);*/
+function ok(user){
+    console.log("El usuario " + user.name + " ha sido creado correctamente");
+}*/
 
-let totalYears = pilots2.reduce((acc , pilot) => acc + pilot.years, 0);
+//callBacks
+/*
+function createUser(username, age, callback){
+    setTimeout(function(){
+        callback({name: username, age: age});
+    }, 2000);
+}
+    
+createUser("Antonio", 20, ok);
 
-console.log(totalYears);
-
-
-var personnel = [ 
-	{ id: 5, name: "Luke Skywalker", pilotingScore: 98, shootingScore: 56, isForceUser: true, }, 
-	{ id: 82, name: "Sabine Wren", pilotingScore: 73, shootingScore: 99, isForceUser: false, }, 
-	{ id: 22, name: "Zeb Orellios", pilotingScore: 20, shootingScore: 59, isForceUser: false, }, 
-	{ id: 15, name: "Ezra Bridger", pilotingScore: 43, shootingScore: 67, 
-	isForceUser: true, }, 
-	{ id: 11, name: "Caleb Dume", pilotingScore: 71, shootingScore: 85, 
-	isForceUser: true, }
-];
+*/
 
 
-let personName = "Hola hector";
+//Promesas
+/*
+function ok(user){
+    console.log("El usuario " + user.name + " ha sido creado correctamente");
+}
 
-console.log(`${personName}`);
+function createUser(username, age, callback){
+
+    return new Promise();
+}
+
+createUser("Antonio", 20).then(ok).catch;
+*/
+
+/*
+try {
+    console.log(username);
+    let username = "Joshua";
+} catch (e) {
+    console.log(e);
+    console.error("Eres mas tonto que ofu");
+}
+
+console.log("Holiiii");
+
+*/
+
+/*
+
+function sumaPositivos(a,b) {
+    if(a < 0 || b<0){
+        throw "No son positivos";
+    }
+
+    return a+b
+};
+
+try {
+    console.log(sumaPositivos(5,6));
+} catch (e) {
+    console.error("Errorrr")
+}
+
+console.log("Sigooo aqui");
+
+*/
+
+
