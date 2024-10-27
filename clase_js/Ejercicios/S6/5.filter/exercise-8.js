@@ -2,10 +2,12 @@ const streamers = [{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'}, {name
 
 let $text = document.querySelector("#toFilterStreamers");
 
-let $btn = document.querySelector("#button");
+
 
 function contenido(){
 
+    let $btn = document.querySelector("#button");
+    
     let streamerinput = streamers.filter(function(streamer){
         return streamer.name.includes($text.value);
     })

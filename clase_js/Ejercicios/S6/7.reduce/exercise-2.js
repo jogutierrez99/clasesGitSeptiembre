@@ -12,7 +12,7 @@ const exams = [
 ];
 
 //Preguntar a Hector
-let sumaTotal = exams.reduce((acc, exam) => (exam.score >= 5) ? acc += exam.score : null, 0);
+let sumaTotal = exams.reduce((acc, exam) => exam.score >= 5 ? acc += exam.score : acc, 0);
 
 
 let sumaTotal2 = exams.reduce(function(acc, exam){
@@ -22,4 +22,4 @@ let sumaTotal2 = exams.reduce(function(acc, exam){
       return acc
 }, 0);
 
-console.log(sumaTotal2);
+console.log(sumaTotal);

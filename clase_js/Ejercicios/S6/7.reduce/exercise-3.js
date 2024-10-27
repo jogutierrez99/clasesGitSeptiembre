@@ -11,6 +11,6 @@ const exams = [
     {name: 'Keanu Reeves', score: 10}
 ];
 //Preguntar a hector
-let media = exams.reduce( (acc, exam) => acc + exam.score ,0) / exams.length;
+let media = exams.reduce( (acc, exam) => acc + exam.score , 0) / exams.length;
 
 console.log(media);
