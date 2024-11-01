@@ -61,21 +61,115 @@ let cardArray = [
     },
 ];
 
+let $firstCard = null;
+let attempts = 0;
+let score = 0;
 
 function init() {
-    loadBoard();
-    //To do evento onclick
+   loadBoard();
+   assignEvents();
+
+}
+
+function assignEvents(){
+
+   let $cards = document.querySelectorAll(".card");
+
+   for (const $card of $cards) {
+      $card.addEventListener("click", selectCard);
+   }
+}
+
+function selectCard(){
+    //TODO si la segunda tarjeta es igual que la primera no cuenta, en cuanto a la misma posicion
+    if(
+        $firstCard !== null  &&
+        this.dataset.id === $firstCard.dataset.id
+      ){
+        alert("No debes hacer click en la misma tarjeta");
+        return;
+      }
+
+    //TODO si la segunda tarjeta clickcada ya esta solucionada no cuenta, es decir el par activo no cuenta
+    if(this.classList.contains("resolved")){
+      alert("Esta tarjeta ya esta correcta");
+      return;
+    };
+
+    this.classList.add("active");
+  
+    if($firstCard === null){
+      //Primer click
+      $firstCard = this;
+    }else{
+      //Segundo click
+      //le damos tiempo para que se olculte hideBoard();
+      setTimeout(hideBoard, 1500);
+      //suma intentos
+      addAtempt();
+      //TODO comprobar si son iguales para ganar puntos
+      if(this.dataset.name === $firstCard.dataset.name){
+        resolveTry($firstCard, this);
+      }
+
+      $firstCard = null;
+
+    }
+}
+
+function resolveTry($card1 , $card2){
+  score++;
+  let $scoreSpan = document.querySelector("#score");
+  $scoreSpan.textContent = score;
+
+  $card1.classList.add("resolved");
+  $card2.classList.add("resolved");
+
+  checkWin();
+}
+
+function checkWin(){
+  let $resolvedCards = document.querySelectorAll(".card.resolved");
+  if($resolvedCards.length === cardArray.length){
+    setTimeout(function(){
+      alert("Enhorabuena, has ganado!");
+    },1000);
+  }
+
+}
+
+function addAtempt(){
+  attempts++;
+  let $attempsSpan = document.querySelector("#attempts");
+  $attempsSpan.textContent = attempts;
 }
 
 function loadBoard() {
     let $container = document.querySelector("#cardsContainer");
 
     for(let card of cardArray){
+        let $card = document.createElement("div");
+        $card.classList.add("card");
+        $card.dataset.id = card.id;
+        $card.dataset.name = card.name;
+
         let $img = document.createElement("img");
         $img.src = card.img;
+        $img.alt = card.name;
+
+        $card.appendChild($img);
+
         //TO DO necesitare alamcenar el id y el nombre de la tarjeta
-        $container.appendChild($img);
+        $container.appendChild($card);
     }
+}
+
+function hideBoard(){
+  //Todo borrar clase active de las cards
+  let $selectedCards = document.querySelectorAll(".card.active");
+  for (const $selectedCard of $selectedCards) {
+    $selectedCard.classList.remove("active");
+  }
 }
 
 init();
