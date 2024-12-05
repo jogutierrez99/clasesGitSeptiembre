@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const Users = require("../models/user.model");
 const {createToken} = require("../../utils/jwt");
+const router = require("../routers/routes");
 
 const addUser = async (req,res)=>{
 
@@ -16,7 +17,6 @@ const addUser = async (req,res)=>{
     }
 };
 
-
 const getUsers = async (req, res) =>{
     try {
 
@@ -27,7 +27,6 @@ const getUsers = async (req, res) =>{
         console.log(error);
     }
 };
-
 
 const updateUser = async (req, res)=>{
     const id = req.params.id;
@@ -108,7 +107,7 @@ const login = async (req, res) =>{
 
         if(!same){
             //si no coinciden las contraseñas envio mensaje de error
-            return req.json("La contraseña es incorrecta");
+            return res.json("La contraseña es incorrecta");
         }
     
         // si coinciden creo el token
@@ -127,5 +126,32 @@ const login = async (req, res) =>{
 
 }
 
+//perfil de usuario
 
-module.exports = {addUser, getUsers, updateUser, deleteUser, register, login};
+const getProfile = async (req, res) => {
+    //req.user
+    // busco en la bd la info que me interesa de ese usuario
+
+    const dataUser = await Users.find({email:req.user.email});
+    return res.json(dataUser);
+
+};
+
+
+const registerUpload = async (req, res) => {
+    
+    const newUser = new Users(req.body);
+
+    if(req.file.path){
+        newUser.image = req.file.path;
+    }
+
+    const createdUser = await newUser.save();
+
+    return res.json(createdUser);
+
+}
+
+
+
+module.exports = {addUser, getUsers, updateUser, deleteUser, register, login, getProfile, registerUpload};

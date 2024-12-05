@@ -1,0 +1,10 @@
+# insert
+idCliente, idclass, time
+
+# buscar a las clases que asistio un cliente
+
+INNER JOIN --> SQL
+
+Select class.name, CLIENT, NAME 
+FROM CLASS INNER JOIN CLIENT_CLASS ON CLASS.IDCLASS = CLIENTE_CLASS.FKCLASS
+INNER JOIN CLIENTE ON CLIENT ON CLIENT.IDCLIENT = CLIENT_CLASS.FK_CLIENT
