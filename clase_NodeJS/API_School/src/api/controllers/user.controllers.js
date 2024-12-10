@@ -103,6 +103,7 @@ const login = async (req, res) =>{
         //comparar la contraseña del usuario con la password de la BD  -- bycrypt.compare()
 
         const same = await bcrypt.compare(password, userDB.password);
+        console.log("Pass body " + password + ", pass BD:" + userDB.password + " variable same: " + same);
         //devuelve true o false si coinciden o no
 
         if(!same){

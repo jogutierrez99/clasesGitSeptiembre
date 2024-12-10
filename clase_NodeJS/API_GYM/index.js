@@ -13,3 +13,4 @@ server.listen( PORT , ()=>{
     console.log(`server running port http://localhost:${PORT}`);
 });
 
+module.exports = server;
