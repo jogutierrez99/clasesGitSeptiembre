@@ -1,0 +1,15 @@
+<div class="app-container" [class.dark-mode]="isDark">
+
+<app-header (isDarkFromChild)="pickDataFromChild($event)" [title]="title"></app-header>
+
+<h1>Nombre click: {{name}}</h1>
+
+  <main>
+    @for(character of charactersList; track character.id; let idx = $index){
+      <app-character (nameFromChild)="pickNameFromChild($event)" [character]="character"></app-character>
+  }@empty {
+    <h2>No hay personajes en la lista</h2>
+  }
+  </main>
+
+</div>

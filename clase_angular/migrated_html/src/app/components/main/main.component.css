@@ -1,0 +1,215 @@
+.main{
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+.Bienvenido{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 8%;
+    position: absolute;
+
+    h1{
+        font-size: 30px;
+        margin: 10px;
+        color: white;
+    }
+
+    h2{
+        font-size: 25px;
+        margin: 10px;
+        color: rgb(250, 82, 15);
+    }
+
+    p{
+        font-size: 16px;
+        margin: 10px;
+        color: white;
+    }
+
+    .nuestra_carta{
+        margin: 10px;
+        font-size: 16px;
+        background-color: rgb(250, 82, 15);
+        padding: 20px;
+        width: 22%;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nuestra_carta:hover{
+        border: 1px solid rgb(250, 82, 15);
+        background-color: transparent;
+    }
+
+    ul{
+        margin: 10px;
+    }
+
+    .contacto_main{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        font-size: 25px; 
+        li a{
+                
+            text-decoration: none;
+            color:white;
+            padding:10px;
+            
+        }
+
+        li a i{
+            color: white;
+        }
+    }
+}
+
+.nuestros_servicios{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 570px;
+
+    h2{   
+        text-align: center;
+        font-size: 2em;
+
+        .servicios{
+            color: rgb(250, 82, 15);
+        }
+    }
+
+    .linea{
+        margin: auto;
+        width: 100px;
+        position: relative;
+
+        span{
+            margin-left: 45%;
+            position: absolute;
+            margin-top: -16.5px;
+            color: rgb(250, 82, 15);
+        }
+    }
+    
+    .section_nuestros_servicios{
+        display: grid;
+        grid-template-columns: repeat(3,33%);
+        margin-left: 10%;
+        margin-right: 10%;
+        height: auto;
+
+        .borde{
+            border-left: 1px solid rgb(71, 71, 71);
+            padding: 20px;
+        }
+
+        .iconos_nuestros_servicios{
+            color:rgb(250, 82, 15);
+            padding: 0.5em;
+            font-size: 1.2em;
+            border: 1px solid rgb(250, 82, 15);
+            margin-bottom: 10px
+        }
+
+        .titulos_servicios{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .leer{
+            text-decoration: none;
+            font-weight: bold;
+            color: rgb(250, 82, 15);
+        }
+
+
+    }
+
+}
+
+.sobre_nosotros{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 880px;
+
+    h2{   
+        text-align: center;
+        font-size: 2em;
+
+        .servicios{
+            color: rgb(250, 82, 15);
+        }
+    }
+
+    .linea{
+        margin: auto;
+        width: 100px;
+        position: relative;
+
+        span{
+            margin-left: 45%;
+            position: absolute;
+            margin-top: -16.5px;
+            color: rgb(250, 82, 15);
+        }
+    }
+
+    .nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 60px;
+
+        .img_nosotros{
+            width: 100%;
+        }
+
+        .texto{
+            margin-left: 15px;
+
+            li h3{
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            li h4{
+                font-size: 17px;
+                color: rgb(250, 82, 15);
+                margin-bottom: 10px;
+            }
+
+            li p{
+                margin-bottom: 40px;
+            }
+
+            .leer_mas{
+            font-size: 16px;
+            background-color: rgb(250, 82, 15);
+            padding: 20px;
+            width: 22%;
+            text-decoration: none;
+            color: white;
+            }
+    
+            .leer_mas:hover{
+            border: 1px solid rgb(250, 82, 15);
+            background-color: transparent;
+            color: rgb(250, 82, 15);;
+            }
+
+        }
+    }
+
+
+
+}
