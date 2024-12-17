@@ -1,0 +1,20 @@
+<form [formGroup]="productFormGroup" (ngSubmit)="handleProductForm()">
+    <div class="form-field">
+        <label for="productName">Nombre</label>
+        <input type="text" name="productName" placeholder="Nombre del producto" formControlName="productName">
+        @if(productFormGroup.get('productName')?.value === '' && isSubmitted){
+            <div class="form-field--text-danger">falta nombre de producto</div>
+        }
+    </div>
+
+    <div class="form-field">
+        <label for="price">Precio</label>
+        <input type="number" name="price" placeholder="precio del producto" formControlName="price">
+        @if(productFormGroup.get('price')?.value === 0 && isSubmitted){
+            <div class="form-field--text-danger">falta precio</div>
+        }
+    </div>
+
+    <button class="form-field" type="submit">Enviar formulario</button>
+
+</form>
