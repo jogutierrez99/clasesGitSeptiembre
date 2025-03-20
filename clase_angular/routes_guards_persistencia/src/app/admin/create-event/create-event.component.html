@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="handleCreateEventForm()">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" formControlName="description">
+    </div>
+    <div class="form-group">
+        <label>date</label>
+        <input type="date" formControlName="date">
+    </div>
+
+    <div class="form-group">
+        <label>Ubicacion</label>
+        <select formControlName="location">
+            <option value="room-1">room-1</option>
+            <option value="room-2">room-2</option>
+            <option value="room-3">room-3</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Tipo de evento</label>
+        <select formControlName="type">
+            <option value="cardio">Cardio</option>
+            <option value="flexibility">Flexibilidad</option>
+            <option value="force">Fuerza</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Enviar">
+</form>

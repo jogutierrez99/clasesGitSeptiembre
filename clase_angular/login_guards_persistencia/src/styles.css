@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+.custom-swal-popup {
+    /* Borde en verde claro */
+    border-radius: 0px !important;       /* Esquinas rectas */
+  }
+  
+  .swal2-title {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+  }
+  
+  .swal2-content {
+    font-size: 1rem !important;
+  }
+  
+  .swal2-confirm {
+    background-color: #d4e157 !important;
+    color: #282826 !important;
+    border-radius: 0px !important;       /* Botón con esquinas rectas */
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+  }

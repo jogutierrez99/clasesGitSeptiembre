@@ -1,0 +1,51 @@
+<div class="events-container">
+    <h2>Event List</h2>
+
+    <div class="search-container">
+        <input 
+          type="text" 
+          placeholder="Search events..." 
+          class="search-input"
+        />
+      </div>
+    <!-- Listado de eventos -->
+    <ul class="events-list">
+        @if(filteredEventList.length > 0) {
+            @for(event of filteredEventList; track event._id){
+                <li>
+                    <div class="event-item">
+                      <!-- Imagen del evento -->
+                      <img [src]="event.image" alt="{{ event.name }}" class="event-image" />
+              
+                      <h3>{{ event.name }}</h3>
+                      <p>{{ event.description }}</p>
+                      <p><strong>Date:</strong> {{ event.date }}</p>
+                      <p><strong>Location:</strong> {{ event.location }}</p>
+                      <p><strong>Type:</strong> {{ event.type }}</p>
+                    </div>
+                  </li>
+            }
+        }@else {
+            @for(event of eventList; track event._id){
+                <li>
+                    <div class="event-item">
+                      <!-- Imagen del evento -->
+                       @if(authService.verifyRole() ==="admin"){
+                        <button (click)="deleteEvent(event._id)">Eliminar evento</button>
+                        <button [routerLink]="['admin/update-event', event._id]">Editar evento</button>
+                       }
+                      <img [src]="event.image" alt="{{ event.name }}" class="event-image" />
+              
+                      <h3>{{ event.name }}</h3>
+                      <p>{{ event.description }}</p>
+                      <p><strong>Date:</strong> {{ event.date | date }}</p>
+                      <p><strong>Location:</strong> {{ event.location }}</p>
+                      <p><strong>Type:</strong> {{ event.type }}</p>
+                    </div>
+                  </li>
+            }
+        }
+   
+    </ul>
+  </div>
+  
